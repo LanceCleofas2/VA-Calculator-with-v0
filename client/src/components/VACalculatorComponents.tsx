@@ -1,6 +1,21 @@
 import { Button, Select } from "flowbite-react";
+import { useState } from "react";
 
 export default function Component() {
+
+  const [showDropdown, setShowDropdown] = useState<boolean>(false);
+  const [selectedOption, setSelectedOption] = useState<string>("Others");
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  const handleOptionSelect = (option: string) => {
+    setSelectedOption(option);
+    toggleDropdown(); // Close the dropdown after selecting an option
+  };
+
+  
   return (
     <div className="bg-white p-8">
       <div className="mb-10 text-center text-2xl font-bold uppercase tracking-wide">Trajector</div>
@@ -65,8 +80,8 @@ export default function Component() {
                       <TooltipContent> */}
                         <p>Head</p>
                       {/* </TooltipContent>
-                    </Tooltip>
-                    <Tooltip>
+                    </Tooltip> */}
+                    {/* <Tooltip>
                       <TooltipTrigger asChild> */}
                         <div className="w-32 h-32 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
                           <span className="sr-only">Torso</span>
@@ -108,8 +123,8 @@ export default function Component() {
                         <TooltipContent> */}
                           <p>Left Leg</p>
                         {/* </TooltipContent>
-                      </Tooltip>
-                      <Tooltip>
+                      </Tooltip> */}
+                      {/* <Tooltip>
                         <TooltipTrigger asChild> */}
                           <div className="w-12 h-24 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
                             <span className="sr-only">Right Leg</span>
@@ -153,6 +168,7 @@ export default function Component() {
           Are you sure your VA rating is fair? Let us uncover your potential rating eligibility.
         </p>
         <div className="grid grid-cols-2 gap-8">
+          <div>
           <div className="border-b pb-4">
             <h3 className="text-sm font-semibold mb-2">Combined Disability Percentage:</h3>
             <p className="text-lg font-bold">0%</p>
@@ -165,8 +181,11 @@ export default function Component() {
             <h3 className="text-sm font-semibold mb-2">Monthly Payment Amount:</h3>
             <p className="text-lg font-bold">$0</p>
           </div>
+          </div>
+          <div>
           <div className="border-b pb-4">
-            <Select>
+            <p>How many dependent children do you have who are under the age of 18?</p>
+            <Select className="w-1/6">
               {/* <SelectTrigger id="children-under-18">
                 <SelectValue placeholder="How many dependent children do you have who are under the age of 18?" />
               </SelectTrigger>
@@ -180,7 +199,8 @@ export default function Component() {
             </Select>
           </div>
           <div className="border-b pb-4">
-            <Select>
+            <p>How many dependent children do you have who are between the ages of 18 and 24?</p>
+            <Select className="w-1/6">
               {/* <SelectTrigger id="children-18-24">
                 <SelectValue placeholder="How many dependent children do you have who are between the ages of 18 and 24?" />
               </SelectTrigger>
@@ -194,7 +214,8 @@ export default function Component() {
             </Select>
           </div>
           <div className="border-b pb-4">
-            <Select>
+            <p>What is your marital status?</p>
+            <Select className="w-1/6">
               {/* <SelectTrigger id="marital-status">
                 <SelectValue placeholder="What is your marital status?" />
               </SelectTrigger>
@@ -207,7 +228,8 @@ export default function Component() {
             </Select>
           </div>
           <div className="border-b pb-4">
-            <Select>
+            <p>How many dependent parents do you have?</p>
+            <Select className="w-1/6">
               {/* <SelectTrigger id="dependent-parents">
                 <SelectValue placeholder="How many dependent parents do you have?" />
               </SelectTrigger>
@@ -218,6 +240,7 @@ export default function Component() {
               </SelectContent> */}
             </Select>
           </div>
+        </div>
         </div>
       </div>
       <div className="text-center">
