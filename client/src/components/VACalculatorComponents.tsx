@@ -2,7 +2,6 @@ import { Button, Select } from "flowbite-react";
 import { useState } from "react";
 
 export default function Component() {
-
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<string>("Others");
 
@@ -15,18 +14,21 @@ export default function Component() {
     toggleDropdown(); // Close the dropdown after selecting an option
   };
 
-  
   return (
     <div className="bg-white p-8">
-      <div className="mb-10 text-center text-2xl font-bold uppercase tracking-wide">Trajector</div>
+      <div className="mb-10 text-center text-2xl font-bold uppercase tracking-wide">
+        Trajector
+      </div>
       <div className="grid grid-cols-3 gap-8">
         <div className="col-span-2 p-8 border rounded-lg">
           <div className="grid grid-cols-2 gap-4">
             <div className="col-span-1">
-              <h2 className="text-lg font-semibold mb-4">Begin by choosing the areas where you have disabilities</h2>
+              <h2 className="text-lg font-semibold mb-4">
+                Begin by choosing the areas where you have disabilities
+              </h2>
               <p className="text-sm mb-8">
-                Choose the specific body part affected by your disability and indicate the percentage of impairment from
-                0% to 100%.
+                Choose the specific body part affected by your disability and
+                indicate the percentage of impairment from 0% to 100%.
               </p>
               <div className="grid grid-cols-4 gap-4 mb-8">
                 <div className="col-span-1">
@@ -72,69 +74,74 @@ export default function Component() {
                 <div className="flex flex-col items-center justify-center space-y-6">
                   {/* <TooltipProvider>
                     <Tooltip>
+                     <TooltipContent> */}
+                  {/* <p>Head</p> */}
+                  {/* </TooltipContent>
                       <TooltipTrigger asChild> */}
-                        <div className="w-24 h-24 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
-                          <span className="sr-only">Head</span>
-                        </div>
-                      {/* </TooltipTrigger>
-                      <TooltipContent> */}
-                        <p>Head</p>
-                      {/* </TooltipContent>
+                  <div className="w-24 h-24 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
+                    <span className="sr-only">Head</span>
+                  </div>
+                  {/* </TooltipTrigger>
                     </Tooltip> */}
-                    {/* <Tooltip>
+
+                  <div style={{ display: "flex", margin: 0 }}>
+                    <div className="flex items-center justify-between w-64">
+                      {/* <Tooltip>
+                      <TooltipContent> */}
+                      {/* <p>Left Arm</p> */}
+                      {/* </TooltipContent>
+                        <TooltipTrigger asChild> */}
+                      <div className="w-24 h-12 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
+                        <span className="sr-only">Left Arm</span>
+                      </div>
+                      {/* </TooltipTrigger>
+                      </Tooltip> */}
+                      <div>
+                        {/* <Tooltip>
                       <TooltipTrigger asChild> */}
                         <div className="w-32 h-32 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
                           <span className="sr-only">Torso</span>
                         </div>
-                      {/* </TooltipTrigger>
+                        {/* </TooltipTrigger>
                       <TooltipContent> */}
-                        <p>Torso</p>
-                      {/* </TooltipContent>
+                        {/* <p>Torso</p> */}
+                        {/* </TooltipContent>
                     </Tooltip> */}
-                    <div className="flex items-center justify-between w-64">
+                      </div>
                       {/* <Tooltip>
                         <TooltipTrigger asChild> */}
-                          <div className="w-24 h-12 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
-                            <span className="sr-only">Left Arm</span>
-                          </div>
-                        {/* </TooltipTrigger>
+                      <div className="w-24 h-12 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
+                        <span className="sr-only">Right Arm</span>
+                      </div>
+                      {/* </TooltipTrigger>
                         <TooltipContent> */}
-                          <p>Left Arm</p>
-                        {/* </TooltipContent>
-                      </Tooltip>
-                      <Tooltip>
-                        <TooltipTrigger asChild> */}
-                          <div className="w-24 h-12 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
-                            <span className="sr-only">Right Arm</span>
-                          </div>
-                        {/* </TooltipTrigger>
-                        <TooltipContent> */}
-                          <p>Right Arm</p>
-                        {/* </TooltipContent>
+                      {/* <p>Right Arm</p> */}
+                      {/* </TooltipContent>
                       </Tooltip> */}
                     </div>
-                    <div className="flex items-center justify-between w-32">
-                      {/* <Tooltip>
+                  </div>
+                  <div className="flex items-center justify-between w-32">
+                    {/* <Tooltip>
                         <TooltipTrigger asChild> */}
-                          <div className="w-12 h-24 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
-                            <span className="sr-only">Left Leg</span>
-                          </div>
-                        {/* </TooltipTrigger>
-                        <TooltipContent> */}
-                          <p>Left Leg</p>
-                        {/* </TooltipContent>
-                      </Tooltip> */}
-                      {/* <Tooltip>
-                        <TooltipTrigger asChild> */}
-                          <div className="w-12 h-24 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
-                            <span className="sr-only">Right Leg</span>
-                          </div>
-                        {/* </TooltipTrigger>
-                        <TooltipContent> */}
-                          <p>Right Leg</p>
-                        {/* </TooltipContent>
-                      </Tooltip> */}
+                    <div className="w-12 h-24 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
+                      <span className="sr-only">Left Leg</span>
                     </div>
+                    {/* </TooltipTrigger>
+                        <TooltipContent> */}
+                    {/* <p>Left Leg</p> */}
+                    {/* </TooltipContent>
+                      </Tooltip> */}
+                    {/* <Tooltip>
+                        <TooltipTrigger asChild> */}
+                    <div className="w-12 h-24 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700">
+                      <span className="sr-only">Right Leg</span>
+                    </div>
+                    {/* </TooltipTrigger>
+                        <TooltipContent> */}
+                    {/* <p>Right Leg</p> */}
+                    {/* </TooltipContent>
+                      </Tooltip> */}
+                  </div>
                   {/* </TooltipProvider> */}
                 </div>
               </section>
@@ -150,9 +157,13 @@ export default function Component() {
             {/* <Progress className="w-full" value={0} /> */}
           </div>
           <div className="text-center">
-            <h3 className="text-lg font-semibold mb-2">Total Disability Rating</h3>
+            <h3 className="text-lg font-semibold mb-2">
+              Total Disability Rating
+            </h3>
             <p className="text-4xl font-bold mb-4">0%</p>
-            <h3 className="text-lg font-semibold mb-2">Total Monthly Compensation</h3>
+            <h3 className="text-lg font-semibold mb-2">
+              Total Monthly Compensation
+            </h3>
             <p className="text-xl font-bold">$ 0</p>
           </div>
           <div className="mt-8">
@@ -162,31 +173,42 @@ export default function Component() {
       </div>
       <div className="mt-16 mb-8">
         <h2 className="text-lg font-semibold mb-4">
-          To complete the assessment, fill out the form to proceed with generating your quote.
+          To complete the assessment, fill out the form to proceed with
+          generating your quote.
         </h2>
         <p className="text-sm mb-8">
-          Are you sure your VA rating is fair? Let us uncover your potential rating eligibility.
+          Are you sure your VA rating is fair? Let us uncover your potential
+          rating eligibility.
         </p>
         <div className="grid grid-cols-2 gap-8">
           <div>
-          <div className="border-b pb-4">
-            <h3 className="text-sm font-semibold mb-2">Combined Disability Percentage:</h3>
-            <p className="text-lg font-bold">0%</p>
-          </div>
-          <div className="border-b pb-4">
-            <h3 className="text-sm font-semibold mb-2">Current Disability Rating:</h3>
-            <p className="text-lg font-bold">0%</p>
-          </div>
-          <div className="border-b pb-4">
-            <h3 className="text-sm font-semibold mb-2">Monthly Payment Amount:</h3>
-            <p className="text-lg font-bold">$0</p>
-          </div>
+            <div className="border-b pb-4">
+              <h3 className="text-sm font-semibold mb-2">
+                Combined Disability Percentage:
+              </h3>
+              <p className="text-lg font-bold">0%</p>
+            </div>
+            <div className="border-b pb-4">
+              <h3 className="text-sm font-semibold mb-2">
+                Current Disability Rating:
+              </h3>
+              <p className="text-lg font-bold">0%</p>
+            </div>
+            <div className="border-b pb-4">
+              <h3 className="text-sm font-semibold mb-2">
+                Monthly Payment Amount:
+              </h3>
+              <p className="text-lg font-bold">$0</p>
+            </div>
           </div>
           <div>
-          <div className="border-b pb-4">
-            <p>How many dependent children do you have who are under the age of 18?</p>
-            <Select className="w-1/6">
-              {/* <SelectTrigger id="children-under-18">
+            <div className="border-b pb-4">
+              <p>
+                How many dependent children do you have who are under the age of
+                18?
+              </p>
+              <Select className="w-1/6">
+                {/* <SelectTrigger id="children-under-18">
                 <SelectValue placeholder="How many dependent children do you have who are under the age of 18?" />
               </SelectTrigger>
               <SelectContent position="popper">
@@ -196,12 +218,15 @@ export default function Component() {
                 <SelectItem value="3">3</SelectItem>
                 <SelectItem value="4">4</SelectItem>
               </SelectContent> */}
-            </Select>
-          </div>
-          <div className="border-b pb-4">
-            <p>How many dependent children do you have who are between the ages of 18 and 24?</p>
-            <Select className="w-1/6">
-              {/* <SelectTrigger id="children-18-24">
+              </Select>
+            </div>
+            <div className="border-b pb-4">
+              <p>
+                How many dependent children do you have who are between the ages
+                of 18 and 24?
+              </p>
+              <Select className="w-1/6">
+                {/* <SelectTrigger id="children-18-24">
                 <SelectValue placeholder="How many dependent children do you have who are between the ages of 18 and 24?" />
               </SelectTrigger>
               <SelectContent position="popper">
@@ -211,12 +236,12 @@ export default function Component() {
                 <SelectItem value="3">3</SelectItem>
                 <SelectItem value="4">4</SelectItem>
               </SelectContent> */}
-            </Select>
-          </div>
-          <div className="border-b pb-4">
-            <p>What is your marital status?</p>
-            <Select className="w-1/6">
-              {/* <SelectTrigger id="marital-status">
+              </Select>
+            </div>
+            <div className="border-b pb-4">
+              <p>What is your marital status?</p>
+              <Select className="w-1/6">
+                {/* <SelectTrigger id="marital-status">
                 <SelectValue placeholder="What is your marital status?" />
               </SelectTrigger>
               <SelectContent position="popper">
@@ -225,12 +250,12 @@ export default function Component() {
                 <SelectItem value="divorced">Divorced</SelectItem>
                 <SelectItem value="widowed">Widowed</SelectItem>
               </SelectContent> */}
-            </Select>
-          </div>
-          <div className="border-b pb-4">
-            <p>How many dependent parents do you have?</p>
-            <Select className="w-1/6">
-              {/* <SelectTrigger id="dependent-parents">
+              </Select>
+            </div>
+            <div className="border-b pb-4">
+              <p>How many dependent parents do you have?</p>
+              <Select className="w-1/6">
+                {/* <SelectTrigger id="dependent-parents">
                 <SelectValue placeholder="How many dependent parents do you have?" />
               </SelectTrigger>
               <SelectContent position="popper">
@@ -238,14 +263,14 @@ export default function Component() {
                 <SelectItem value="1">1</SelectItem>
                 <SelectItem value="2">2</SelectItem>
               </SelectContent> */}
-            </Select>
+              </Select>
+            </div>
           </div>
-        </div>
         </div>
       </div>
       <div className="text-center">
         <Button>Submit</Button>
       </div>
     </div>
-  )
+  );
 }
